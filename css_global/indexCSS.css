@@ -49,7 +49,7 @@ h3 {
 a {
     text-decoration: none;
     color: inherit;
-    transition: all .3s ease;
+    transition: all .5s ease;
 }
 a:hover {color: dodgerblue}
 a:active {text-transform: uppercase}
