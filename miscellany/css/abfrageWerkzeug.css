@@ -1,0 +1,551 @@
+body {
+  background-color: black;
+  color: silver;
+  padding: 3rem 3rem;
+}
+
+h1 {
+  font: italic bold 2rem/2.25rem sans-serif;
+}
+
+h2 {
+  font: 1rem/1.2rem sans-serif;
+  margin: 1rem 0;
+}
+
+h3 {
+  font: bold 1.5rem/1.75rem sans-serif;
+  text-indent: 2rem;
+}
+
+h4 {
+  font: italic 0.75rem/1rem sans-serif;
+}
+
+.header {
+  width: 30rem;
+  padding-left: 2rem;
+}
+
+.main {
+  border: 1px solid silver;
+  border-radius: 3rem;
+  padding: 2rem 2rem;
+  width: 40rem;
+}
+
+.queryBox {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: beige;
+  color: darkslategray;
+  border-radius: 1.5rem;
+  font: italic 1.25rem/1.5rem serif;
+}
+
+.query {
+  margin: 1.5rem;
+}
+
+span {
+  font: bold normal 1.75rem/2rem sans-serif;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+
+.vpWidth, .vpHeight {
+  color: darkslateblue;
+  text-transform: initial;
+}
+
+.footer {
+  width: 30rem;
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+@supports (display: grid) {
+  .gridSupport { color: green }
+  .gridSupport:before { content: "yes" }
+}
+
+@supports not (display: grid) {
+  .gridSupport { color: red }
+  .gridSupport:before { content: "no" }
+}
+
+@supports (display: flex) {
+  .flexSupport { color: green }
+  .flexSupport:before { content: "yes" }
+}
+
+@supports not (display: flex) {
+  .flexSupport { color: red }
+  .flexSupport:before { content: "no" }
+}
+
+@supports (position: sticky) {
+  .stickySupport { color: green }
+  .stickySupport:before { content: "yes" }
+}
+
+@supports not (position: sticky) {
+  .stickySupport { color: red }
+  .stickySupport:before { content: "no" }
+}
+
+@media (max-width: 240px) {
+  .vpWidth:before { content: "0px - 240px" }
+}
+
+@media (min-width: 241px) {
+  .vpWidth:before { content: "241px - 272px" }
+}
+
+@media (min-width: 273px) {
+  .vpWidth:before { content: "273px - 280px" }
+}
+
+@media (min-width: 281px) {
+  .vpWidth:before { content: "281px - 290px" }
+}
+
+@media (min-width: 291px) {
+  .vpWidth:before { content: "291px - 312px" }
+}
+
+@media (min-width: 313px) {
+  .vpWidth:before { content: "313px - 320px" }
+}
+
+@media (min-width: 321px) {
+  .vpWidth:before { content: "321px - 325px" }
+}
+
+@media (min-width: 326px) {
+  .vpWidth:before { content: "326px - 330px" }
+}
+
+@media (min-width: 331px) {
+  .vpWidth:before { content: "331px - 340px" }
+}
+
+@media (min-width: 341px) {
+  .vpWidth:before { content: "341px - 360px" }
+}
+
+@media (min-width: 361px) {
+  .vpWidth:before { content: "361px - 375px" }
+}
+
+@media (min-width: 376px) {
+  .vpWidth:before { content: "376px - 390px" }
+}
+
+@media (min-width: 391px) {
+  .vpWidth:before { content: "391px - 411px" }
+}
+
+@media (min-width: 412px) {
+  .vpWidth:before { content: "412px - 414px" }
+}
+
+@media (min-width: 415px) {
+  .vpWidth:before { content: "415px - 480px" }
+}
+
+@media (min-width: 481px) {
+  .vpWidth:before { content: "481px - 540px" }
+}
+
+@media (min-width: 541px) {
+  .vpWidth:before { content: "541px - 568px" }
+}
+
+@media (min-width: 569px) {
+  .vpWidth:before { content: "569px - 600px" }
+}
+
+@media (min-width: 601px) {
+  .vpWidth:before { content: "601px - 640px" }
+}
+
+@media (min-width: 641px) {
+  .vpWidth:before { content: "641px - 667px" }
+}
+
+@media (min-width: 668px) {
+  .vpWidth:before { content: "668px - 720px" }
+}
+
+@media (min-width: 721px) {
+  .vpWidth:before { content: "721px - 731px" }
+}
+
+@media (min-width: 732px) {
+  .vpWidth:before { content: "732px - 736px" }
+}
+
+@media (min-width: 737px) {
+  .vpWidth:before { content: "737px - 750px" }
+}
+
+@media (min-width: 751px) {
+  .vpWidth:before { content: "751px - 768px" }
+}
+
+@media (min-width: 769px) {
+  .vpWidth:before { content: "769px - 800px" }
+}
+
+@media (min-width: 801px) {
+  .vpWidth:before { content: "801px - 850px" }
+}
+
+@media (min-width: 851px) {
+  .vpWidth:before { content: "851px - 853px" }
+}
+
+@media (min-width: 854px) {
+  .vpWidth:before { content: "854px - 854px" }
+}
+
+@media (min-width: 855px) {
+  .vpWidth:before { content: "855px - 900px" }
+}
+
+@media (min-width: 901px) {
+  .vpWidth:before { content: "901px - 960px" }
+}
+
+@media (min-width: 961px) {
+  .vpWidth:before { content: "961px - 1024px" }
+}
+
+@media (min-width: 1025px) {
+  .vpWidth:before { content: "1025px - 1080px" }
+}
+
+@media (min-width: 1081px) {
+  .vpWidth:before { content: "1081px - 1136px" }
+}
+
+@media (min-width: 1137px) {
+  .vpWidth:before { content: "1137px - 1200px" }
+}
+
+@media (min-width: 1201px) {
+  .vpWidth:before { content: "1201px - 1280px" }
+}
+
+@media (min-width: 1281px) {
+  .vpWidth:before { content: "1281px - 1334px" }
+}
+
+@media (min-width: 1335px) {
+  .vpWidth:before { content: "1335px - 1366px" }
+}
+
+@media (min-width: 1367px) {
+  .vpWidth:before { content: "1367px - 1440px" }
+}
+
+@media (min-width: 1441px) {
+  .vpWidth:before { content: "1441px - 1536px" }
+}
+
+@media (min-width: 1537px) {
+  .vpWidth:before { content: "1537px - 1600px" }
+}
+
+@media (min-width: 1601px) {
+  .vpWidth:before { content: "1601px - 1700px" }
+}
+
+@media (min-width: 1701px) {
+  .vpWidth:before { content: "1701px - 1800px" }
+}
+
+@media (min-width: 1801px) {
+  .vpWidth:before { content: "1801px - 1824px" }
+}
+
+@media (min-width: 1825px) {
+  .vpWidth:before { content: "1825px - 1920px" }
+}
+
+@media (min-width: 1921px) {
+  .vpWidth:before { content: "1921px - 2000px" }
+}
+
+@media (min-width: 2001px) {
+  .vpWidth:before { content: "2001px - 2048px" }
+}
+
+@media (min-width: 2049px) {
+  .vpWidth:before { content: "2049px - 2160px" }
+}
+
+@media (min-width: 2161px) {
+  .vpWidth:before { content: "2161px - 2304px" }
+}
+
+@media (min-width: 2305px) {
+  .vpWidth:before { content: "2305px - 2560px" }
+}
+
+@media (min-width: 2561px) {
+  .vpWidth:before { content: "2561px - 2732px" }
+}
+
+@media (min-width: 2733px) {
+  .vpWidth:before { content: "2733px - 2736px" }
+}
+
+@media (min-width: 2737px) {
+  .vpWidth:before { content: "2737px - 2880px" }
+}
+
+@media (min-width: 2881px) {
+  .vpWidth:before { content: "2881px - 3000px" }
+}
+
+@media (min-width: 3001px) {
+  .vpWidth:before { content: "3001px - 3840px" }
+}
+
+@media (min-width: 3841px) {
+  .vpWidth:before { content: "3841px - 5120px" }
+}
+
+@media (min-width: 5121px) {
+  .vpWidth:before { content: "greater than 5120px" }
+}
+
+@media (max-height: 240px) {
+  .vpHeight:before { content: "0px - 240px" }
+}
+
+@media (min-height: 241px) {
+  .vpHeight:before { content: "241px - 272px" }
+}
+
+@media (min-height: 273px) {
+  .vpHeight:before { content: "273px - 280px" }
+}
+
+@media (min-height: 281px) {
+  .vpHeight:before { content: "281px - 290px" }
+}
+
+@media (min-height: 291px) {
+  .vpHeight:before { content: "291px - 312px" }
+}
+
+@media (min-height: 313px) {
+  .vpHeight:before { content: "313px - 320px" }
+}
+
+@media (min-height: 321px) {
+  .vpHeight:before { content: "321px - 325px" }
+}
+
+@media (min-height: 326px) {
+  .vpHeight:before { content: "326px - 330px" }
+}
+
+@media (min-height: 331px) {
+  .vpHeight:before { content: "331px - 340px" }
+}
+
+@media (min-height: 341px) {
+  .vpHeight:before { content: "341px - 360px" }
+}
+
+@media (min-height: 361px) {
+  .vpHeight:before { content: "361px - 375px" }
+}
+
+@media (min-height: 376px) {
+  .vpHeight:before { content: "376px - 390px" }
+}
+
+@media (min-height: 391px) {
+  .vpHeight:before { content: "391px - 411px" }
+}
+
+@media (min-height: 412px) {
+  .vpHeight:before { content: "412px - 414px" }
+}
+
+@media (min-height: 415px) {
+  .vpHeight:before { content: "415px - 480px" }
+}
+
+@media (min-height: 481px) {
+  .vpHeight:before { content: "481px - 540px" }
+}
+
+@media (min-height: 541px) {
+  .vpHeight:before { content: "541px - 568px" }
+}
+
+@media (min-height: 569px) {
+  .vpHeight:before { content: "569px - 600px" }
+}
+
+@media (min-height: 601px) {
+  .vpHeight:before { content: "601px - 640px" }
+}
+
+@media (min-height: 641px) {
+  .vpHeight:before { content: "641px - 667px" }
+}
+
+@media (min-height: 668px) {
+  .vpHeight:before { content: "668px - 720px" }
+}
+
+@media (min-height: 721px) {
+  .vpHeight:before { content: "721px - 731px" }
+}
+
+@media (min-height: 732px) {
+  .vpHeight:before { content: "732px - 736px" }
+}
+
+@media (min-height: 737px) {
+  .vpHeight:before { content: "737px - 750px" }
+}
+
+@media (min-height: 751px) {
+  .vpHeight:before { content: "751px - 768px" }
+}
+
+@media (min-height: 769px) {
+  .vpHeight:before { content: "769px - 800px" }
+}
+
+@media (min-height: 801px) {
+  .vpHeight:before { content: "801px - 850px" }
+}
+
+@media (min-height: 851px) {
+  .vpHeight:before { content: "851px - 853px" }
+}
+
+@media (min-height: 854px) {
+  .vpHeight:before { content: "854px - 854px" }
+}
+
+@media (min-height: 855px) {
+  .vpHeight:before { content: "855px - 900px" }
+}
+
+@media (min-height: 901px) {
+  .vpHeight:before { content: "901px - 960px" }
+}
+
+@media (min-height: 961px) {
+  .vpHeight:before { content: "961px - 1024px" }
+}
+
+@media (min-height: 1025px) {
+  .vpHeight:before { content: "1025px - 1080px" }
+}
+
+@media (min-height: 1081px) {
+  .vpHeight:before { content: "1081px - 1136px" }
+}
+
+@media (min-height: 1137px) {
+  .vpHeight:before { content: "1137px - 1200px" }
+}
+
+@media (min-height: 1201px) {
+  .vpHeight:before { content: "1201px - 1280px" }
+}
+
+@media (min-height: 1281px) {
+  .vpHeight:before { content: "1281px - 1334px" }
+}
+
+@media (min-height: 1335px) {
+  .vpHeight:before { content: "1335px - 1366px" }
+}
+
+@media (min-height: 1367px) {
+  .vpHeight:before { content: "1367px - 1440px" }
+}
+
+@media (min-height: 1441px) {
+  .vpHeight:before { content: "1441px - 1536px" }
+}
+
+@media (min-height: 1537px) {
+  .vpHeight:before { content: "1537px - 1600px" }
+}
+
+@media (min-height: 1601px) {
+  .vpHeight:before { content: "1601px - 1700px" }
+}
+
+@media (min-height: 1701px) {
+  .vpHeight:before { content: "1701px - 1800px" }
+}
+
+@media (min-height: 1801px) {
+  .vpHeight:before { content: "1801px - 1824px" }
+}
+
+@media (min-height: 1825px) {
+  .vpHeight:before { content: "1825px - 1920px" }
+}
+
+@media (min-height: 1921px) {
+  .vpHeight:before { content: "1921px - 2000px" }
+}
+
+@media (min-height: 2001px) {
+  .vpHeight:before { content: "2001px - 2048px" }
+}
+
+@media (min-height: 2049px) {
+  .vpHeight:before { content: "2049px - 2160px" }
+}
+
+@media (min-height: 2161px) {
+  .vpHeight:before { content: "2161px - 2304px" }
+}
+
+@media (min-height: 2305px) {
+  .vpHeight:before { content: "2305px - 2560px" }
+}
+
+@media (min-height: 2561px) {
+  .vpHeight:before { content: "2561px - 2732px" }
+}
+
+@media (min-height: 2733px) {
+  .vpHeight:before { content: "2733px - 2736px" }
+}
+
+@media (min-height: 2737px) {
+  .vpHeight:before { content: "2737px - 2880px" }
+}
+
+@media (min-height: 2881px) {
+  .vpHeight:before { content: "2881px - 3000px" }
+}
+
+@media (min-height: 3001px) {
+  .vpHeight:before { content: "3001px - 3840px" }
+}
+
+@media (min-height: 3841px) {
+  .vpHeight:before { content: "3841px - 5120px" }
+}
+
+@media (min-height: 5121px) {
+  .vpHeight:before { content: "greater than 5120px" }
+}

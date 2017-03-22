@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <title>CSS AbfrageWerkzeug</title>
+  <link rel="stylesheet" type="text/css" href="../css_global/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/abfrageWerkzeug.css">
+</head>
+<body>
+  <div class="header">
+    <h1>CSS AbfrageWerkzeug</h1>
+    <h2>queries browser for support of CSS Grid and CSS Flexbox layouts, as well as support for the "sticky" position attribute; also display px width and heigh ranges for the current viewport</h2>
+  </div>
+  <div class="main">
+    <h3>Queries</h3>
+    <div class="queryBox">
+      <div class="query">
+        <p>Browser supports GRID (display: grid)? <span class="gridSupport"></span></p>
+      </div>
+      <div class="query">
+        <p>Browser supports FLEX (display: flex)? <span class="flexSupport"></span></p>
+      </div>
+      <div class="query">
+        <p>Browser supports STICKY (position: sticky)? <span class="stickySupport"></span></p>
+      </div>
+      <div class="query">
+        <p>Viewport WIDTH range is: <span class="vpWidth"></span></p>
+      </div>
+      <div class="query">
+        <p>Viewport HEIGHT range is: <span class="vpHeight"></span></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <h4>note: viewport ranges defined based on reference to a variety of market device resolutions</h4>
+  </div>
+</body>
