@@ -1,0 +1,236 @@
+header, nav, div, a, h1, h2, main, h3, p, figure, figcaption, img, footer, i, span  { box-sizing: border-box }
+header { background-color: darkblue }
+
+h1 {
+  font-family: "Iceland", sans-serif;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: "Play", sans-serif;
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 1.75rem; font-weight: bold;
+  margin: 0.5rem 0; text-align: center;
+}
+
+p {
+  line-height: 1.2; margin: 1rem 0;
+  text-align: justify; text-indent: 7vw;
+  font-family: "Karla", sans-serif;
+  font-weight: 400; font-size: 1.1rem;
+}
+
+figcaption {
+  font-family: "Forum", serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+a:link, a:visited { color: inherit; 
+  text-decoration: none }
+a:hover { color: dodgerblue }
+
+.headerNav {
+  padding: 1vw;
+  display: flex; flex-flow: row wrap; 
+  justify-content: space-around; 
+  background-color: black; color: silver;
+}
+
+.headerNav > div {
+  margin: auto 1vw;
+  padding: 1vw;
+  flex: 0 1 auto;
+}
+
+.headerLinks {
+  display: flex; flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.headerLinks > div {
+  flex: 0 1 auto;
+  margin: auto 3vw;
+}
+
+.headerLinks a:active { text-transform: uppercase }
+
+.content {
+  display: flex; flex-flow: column;
+  background-color: black; 
+  color: darkslategray;
+}
+
+.content > div {
+  flex: 0 1 auto;
+  margin: 0 2vw;
+  border-radius: 1vw;
+  padding: 2vw;
+}
+
+.aboutCopy, .portfolioFigs, .contactLinks {
+  margin: 2vw;
+}
+
+#contentAbout {
+  background-color: moccasin;
+}
+
+#contentPortfolio {
+  background-color: plum;
+  margin-top: 2vw; margin-bottom: 2vw;
+}
+
+.portfolioProjects {
+  display: flex; flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.projectFig {
+  flex: 0 1 auto;
+  margin: 0 auto; padding: 3vw 0;
+}
+
+.projectFig > figcaption { margin-bottom: 1vw; text-indent: 3vw }
+.projectFig > img { width: 70vw }
+
+#contentContact { background-color: darkturquoise }
+
+.contactLinks {
+  display: flex; flex-flow: column;
+  justify-content: flex-start;
+}
+
+.linkFig {
+  flex: 0 1 auto;
+  padding: 2vw 0 2vw 15vw;
+}
+
+.linkFig > a :nth-child(n) {
+  margin: 1vw; display: inline-block;
+  vertical-align: middle;
+}
+
+.linkFig img {
+  height: 20vw;
+}
+
+footer { background-color: darkmagenta }
+
+.footerBar {
+  display: flex; 
+  flex-flow: row wrap; 
+  justify-content: space-around; 
+  background-color: black; 
+  color: silver;
+  font-family: "Play", sans-serif;
+}
+
+.footerBar > div {
+  flex: 0 1 auto;
+  margin: 1vw;
+}
+
+.footerBar i, .footerBar p {
+  display: inline-block;
+  margin: auto 0; vertical-align: middle
+}
+
+@media (max-width: 320px) {
+  h1 { font-size: 2.25rem }
+  h2 { font-size: 1rem }
+  h3 { font-size: 1.5rem }
+  p { font-size: 1rem; text-align: left; text-indent: 0 }
+  figcaption { font-size: 1.1rem }
+  .linkFig { padding: 2vw 0 2vw 7.5vw }
+}
+
+@media (min-width: 641px) {
+  .contactLinks {
+    flex-flow: row wrap; justify-content: space-around;
+  }
+  .linkFig { padding: 2vw 0 }
+  .linkFig > a :nth-child(n) { display: block; }
+  .linkFig figcaption { text-align: center }
+}
+
+@media (min-width: 801px) {
+/*  .content, .portfolioProjects, .contactLinks {
+    flex-flow: initial;
+    justify-content: initial;
+  } */
+    
+  p {
+    text-align: left;
+    text-indent: 2vw;
+  }
+  
+  .content {
+    background-color: black;
+    color: darkslategray;
+    padding: 0 2vw;
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: 30vw minmax(60vw, 1fr);
+  }
+  
+  .content > div {
+    border-radius: 1vw;
+    padding: 2vw; margin: 0;
+  }
+  
+  .aboutCopy, .portfolioFigs, .contactLinks {
+    margin: 0;
+  }
+
+  
+  #contentAbout {
+    background-color: moccasin;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  #contentPortfolio {
+    margin: 0;
+    background-color: plum;
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+  
+  .portfolioProjects {
+    padding: 1vw 2vw;
+    display: grid;
+    grid-gap: 4vw;
+  }
+  
+  .projectFig > figcaption { text-indent: 3vw; margin-bottom: 0.75vw }
+  .projectFig > img { margin: 0 auto; width: 100% }
+  
+  #contentContact {
+    background-color: darkturquoise;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .contactLinks {
+    display: grid;
+  }
+  
+  .linkFig {
+    padding: 0;
+  }
+  
+  .linkFig > a :nth-child(n) {
+    display: inline-block;
+    margin: 1vw;
+    vertical-align: middle;
+  }
+  
+  .linkFig img {
+    height: 5vw;
+  }
+}
