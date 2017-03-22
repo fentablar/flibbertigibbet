@@ -1,0 +1,167 @@
+a, article, aside, div, footer, h1, h2, h3, h4, h5, header, i, li, nav, p, section, span, ul { box-sizing: border-box; }
+
+/* START BACKGROUND STYLING */
+.master { background-color: snow }
+#headerNavbar { background-color: snow }
+.contentBanner {
+  background-color: maroon;
+  background-image: url("https://res.cloudinary.com/fentablar/image/upload/v1489871647/HMS-Surprise_1600x500_bapihz.jpg");
+  background-size: cover;
+}
+/* END BACKGROUND STYLING */
+
+/* START FONT STYLING */
+.master {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; color: saddlebrown;
+}
+.headerSiteName {
+  font-family: "Iceland", sans-serif;
+}
+.headerNavLinks {
+  font-family: "Play", sans-serif;
+}
+.contentTitle, .contentByLine {
+  color: snow;
+  text-shadow: -0.5vmin 0.5vmin 1vmin black;
+}
+.contentTitle {
+  font-family: "Forum", sans-serif;
+  text-transform: uppercase;
+}
+.contentByLine { font-family: "Homemade Apple", cursive }
+.articleForward { font-style: italic }
+.mediaTitle { font-style: italic } /* for styling names of books, movies, etc */
+#contentAside h5 {
+  font-family: "Forum", sans-serif;
+  text-transform: uppercase;
+}
+#footerInfoBar { color: #a6a6a6 }
+/* END FONT STYLING /*
+
+/* START LINK STYLING */
+a { text-decoration: none }
+a:link, a:visited { color: inherit }
+a:hover { color: peru }
+.headerSiteName a, .headerNavLinks a { text-transform: lowercase }
+.headerNavLinks a:active { text-transform: uppercase }
+.contentMain a:link, .contentMain a:visited {
+  color: firebrick;
+}
+.contentMain a:hover { color: dodgerblue }
+.articleForward a { font-weight: bold }
+#footerInfoBar a:hover { color: dodgerblue }
+/* END LINK STYLING */
+
+/* START POSITIONING et SIZING */
+.master {
+  margin: 0 auto;
+  /* min-width: 640px; max-width: 1280px; */
+}
+
+.pageHeader {
+  position: fixed; top 0;
+  width: 100%;
+  border-bottom: 1px solid saddlebrown;
+}
+
+#headerNavbar {
+  height: 6vmin; width: 100%;
+  padding: 0 10vmin 0 3vmin;
+  display: flex; flex-flow: row wrap;
+}
+
+.headerSiteName, .headerNavLinks {
+  flex: 0 1 auto;
+  margin-top: auto; margin-bottom: auto;
+}
+
+.headerSiteName {
+  font-size: 3.75vmin;
+}
+
+.headerNavLinks {
+  font-size: 2vmin;
+  margin-left: auto;
+  display: flex; flex-flow: row wrap;
+}
+
+.link { margin: 1vmin 3vmin }
+
+.content { padding-top: 6vmin }
+
+.contentBanner {
+  height: 40vmin; border-bottom: 1px solid saddlebrown;
+  display: flex; flex-flow: column nowrap;
+  align-items: center; justify-content: center;
+}
+
+.contentTitle, .contentByLine {
+  flex: 0 1 auto;
+  padding: 1vmin;
+  text-align: center;
+}
+
+.contentTitle h1 {
+  margin-bottom: 1vmin;
+  font-size: 11vmin;
+}
+
+.contentByLine h2 { font-size: 3vmin }
+.contentByLine h3 {
+  margin-top: 3vmin;
+  font-size: 5vmin;
+}
+
+.contentMain {
+  display: flex; flex-flow: row nowrap;
+}
+
+.articleContainer {
+  flex: 0 1 70%;
+  padding: 3vmin 0 3vmin 6vmin;
+}
+#contentArticle {
+  padding: 0 2vmin 2vmin 0;
+  border-right: 1px solid saddlebrown;
+}
+
+#contentArticle p, #contentAside li {
+  font-size: 1.75vmin;
+  line-height: 1.4;
+}
+
+#contentArticle p { margin: 1em 0 }
+
+#contentArticle h4, #contentAside h5 {
+  font-size: 2.5vmin;
+  margin: .75em 0;
+  font-weight: bold;
+}
+
+.asideContainer {
+  flex: 0 1 30%;
+  padding: 10vmin 2vmin 10vmin 0;
+}
+#contentAside { padding-left: 2vmin }
+
+#footerInfoBar {
+  display: flex; flex-flow: row nowrap;
+  justify-content: space-around; align-items: center;
+  padding: 2vmin 3vmin;
+}
+
+#footerInfoBar p {
+  font-size: 1.5vmin;
+  display: inline-block;
+  margin: auto 0;
+  vertical-align: middle;
+}
+
+#footerInfoBar i {
+  font-size: 2vmin;
+  display: inline-block;
+  margin: auto 0;
+  vertical-align: middle;
+}
+/* END POSITIONING et SIZING */
