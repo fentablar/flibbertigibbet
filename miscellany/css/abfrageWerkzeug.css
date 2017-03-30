@@ -1,7 +1,7 @@
 body {
   background-color: black;
   color: silver;
-  padding: 3rem 3rem;
+  padding: 5vh 2vw;
 }
 
 h1 {
@@ -15,7 +15,6 @@ h2 {
 
 h3 {
   font: bold 1.5rem/1.75rem sans-serif;
-  text-indent: 2rem;
 }
 
 h4 {
@@ -23,28 +22,28 @@ h4 {
 }
 
 .header {
-  width: 30rem;
-  padding-left: 2rem;
+  margin: 0 auto;
 }
 
 .main {
+  margin: 5vh 0;
   border: 1px solid silver;
-  border-radius: 3rem;
-  padding: 2rem 2rem;
-  width: 40rem;
+  border-radius: 5vh;
+  padding: 3vh 3vh;
+  width: 80vw;
 }
 
 .queryBox {
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 3vh auto;
+  padding: 3vh 2vw;
   background-color: beige;
   color: darkslategray;
-  border-radius: 1.5rem;
+  border-radius: 5vh;
   font: italic 1.25rem/1.5rem serif;
 }
 
 .query {
-  margin: 1.5rem;
+  margin: 2vh 3vw;
 }
 
 span {
@@ -59,9 +58,7 @@ span {
 }
 
 .footer {
-  width: 30rem;
-  margin: 1rem 0;
-  padding-left: 2rem;
+  padding: 0 3vw;
 }
 
 @supports (display: grid) {
