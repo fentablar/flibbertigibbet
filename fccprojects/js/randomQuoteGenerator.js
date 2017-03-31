@@ -15,7 +15,7 @@ function loadQuote() {
       $("#theQuote").html(currQuote);
       $("#theAuthor").html(currAuth);
       $("#theCat").html(currCat);
-      $("#tweetQuote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&via=fentablar&text=' + encodeURIComponent('"' + currQuote + '" -' + currAuth));
+      $("#tweetQuote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&via=fentablar&text=' + encodeURIComponent('"' + currQuote + '" ' + currAuth));
     }
   });
 }
