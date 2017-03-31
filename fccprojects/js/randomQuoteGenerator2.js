@@ -6,6 +6,7 @@ function loadQuote() {
     currAuth = quoteMeta.author;
     $("#theQuote").html(currQuote);
     $("#theAuthor").html(currAuth);
+    $("#tweetQuote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&via=fentablar&text=' + encodeURIComponent('"' + currQuote + '" -' + currAuth));
   });
 }
 $(document).ready(function () {
