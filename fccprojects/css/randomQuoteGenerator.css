@@ -1,0 +1,76 @@
+* {box-sizing: border-box}
+
+body {
+  background-color: cornflowerblue;
+  color: antiquewhite;
+  font-family: "Play", sans-serif;
+}
+
+header {
+  margin: 3vh auto 3vh 15vw;
+  text-align: left;
+  font: 1.75rem "Play", sans-serif;
+}
+
+main {
+  background-color: antiquewhite;
+  color: cornflowerblue;
+  margin: 3vh auto auto auto;
+  border-radius: 1rem;
+  width: 96vw;
+  max-width: 800px;
+}
+
+.quoteBlock {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 2vh 2vw;
+}
+
+.quoteText {
+  font: bold 3rem sans-serif;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+#theQuote {
+  font: normal 2rem "Sorts Mill Goudy",serif;
+  padding: 0 2vw;
+}
+
+.quoteAuth {
+  font: italic 1.5rem sans-serif;
+  text-align: right;
+  margin: 2vh 10vh 0 0;
+}
+
+#theAuthor {}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 2vh 5vw;
+}
+
+.button {
+  flex: 0 1 auto;
+  background-color: cornflowerblue;
+  color: antiquewhite;
+  margin: 0.5vh 0 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 0.7}
+
+#newQuote {
+  margin-left: auto;
+  margin-right: 1vw;
+}
+
+footer {
+  margin: 2vh 15vw auto auto;
+  text-align: right;
+}

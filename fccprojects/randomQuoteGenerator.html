@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Quote Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img_global/volume_integral_u2230_icon_64x64.png">
+    <link rel="stylesheet" type="text/css" href="../css_global/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Play" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/randomQuoteGenerator.css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="js/randomQuoteGenerator.js"></script>
+  </head>
+  <body>
+    <header>
+      <span>quotes at random</span>
+    </header>
+    <main>
+      <div class="quoteBlock">
+        <div class="quoteText">
+        &ldquo;<span id="theQuote"></span>&rdquo;
+        </div>
+        <div class="quoteAuth">
+        &sim;&ensp;<span id="theAuthor"></span>&ensp;&sim;
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="button" id="newQuote">
+        <span>reload</span>
+        </div>
+        <div class="button">
+          <a id="tweetThis" title="tweet this!" target="_blank">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span>page by fentablar</span>
+    </footer>
+  </body>
+</html>
