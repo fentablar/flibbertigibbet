@@ -1,4 +1,4 @@
-var currQuote = "", currAuth = "", currCat = "";
+/* var currQuote = "", currAuth = "", currCat = "";
 function loadQuote() {
   $.ajax({
     headers: {
@@ -13,12 +13,11 @@ function loadQuote() {
       currCat = JSON.parse(quoteMeta).category;
       $("#theQuote").html(currQuote);
       $("#theAuthor").html(currAuth);
-      $("#theCat").html(currCat);
       $("#tweetLink").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&via=fentablar&text=' + encodeURIComponent('\u201C' + currQuote + '\u201D ' + currAuth));
     }
   });
 }
 $(document).ready(function() {
   loadQuote();
-  $("#nextQuote").on("click", loadQuote);
-});
+  $("#iterateQuote").on("click", loadQuote);
+}); */
