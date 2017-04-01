@@ -1,81 +1,86 @@
-* {box-sizing: border-box}
+body, header, footer, div, span, a {box-sizing: border-box}
 
 body {
-  background-color: cornflowerblue;
-  color: antiquewhite;
-  font-family: "Play", sans-serif;
+  background-color: saddlebrown;
+  color: navajowhite;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
-header {
-  margin: 3vh auto 3vh 15vw;
-  text-align: left;
-  font: 1.75rem "Play", sans-serif;
+body > div {
+  width: 100vw;
+  min-width: 320px;
+  max-width: 640px;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
-main {
-  background-color: antiquewhite;
-  color: cornflowerblue;
-  margin: 3vh auto auto auto;
-  border-radius: 1rem;
-  width: 96vw;
-  max-width: 800px;
+.a-block {
+  height: 40vh;
 }
 
-footer {
-  margin: 2vh 15vw auto auto;
-  text-align: right;
+.b-block {
+  height: 15vh;
 }
+.quote, .author, .replay, .tweet {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+.quote {
+  height: 70%;
+  font: 2rem "Sorts Mill Goudy", serif;
+}
+#theQuote:before {content: "\201C"}
+#theQuote:after {content: "\201D"}
+
+.author {
+  height: 30%;
+  font: 1.75rem "Quicksand", sans-serif;
+}
+#theAuthor:before {content: "\223C\2002"}
+#theAuthor:after {content: "\2002\223C"}
+
+.replay {
+  height: 60%;
+  margin-bottom: auto;
+  font: 1.25rem "Cutive Mono", sans-serif;
+  letter-spacing: 3px;
+  color: sandybrown;
+}
+.tweet {
+  height: 40%;
+  margin-top: auto;
+  font: 1rem "Cutive Mono", sans-serif;
+  color: sandybrown;
+}
+#nextQuote, #tweetQuote {cursor: pointer}
+#nextQuote:before {content: "ITERATE"}
+#tweetQuote:before {content: "share via twitter"}
+
+header, footer {
+  position: fixed;
+  bottom: 10px;
+  font: 1rem "Pontano Sans", serif;
+  color: maroon;
+  opacity: 0.6;
+}
+
+header {left: 10px}
+footer {right: 10px}
+
+#headerText:before {content: "quotes at random"}
+#footerText:before {content: "page by fentablar"}
 
 a:link, a:visited {
   text-decoration: none;
   color: inherit;
-}
-
-.quoteBlock {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  padding: 2vh 2vw;
-}
-
-.quoteText {
-  font: bold 3rem sans-serif;
-  line-height: 1.25rem;
-  text-align: center;
-}
-
-#theQuote {
-  font: normal 2rem "Sorts Mill Goudy",serif;
-  padding: 0 2vw;
-}
-
-.quoteAuth {
-  font: italic 1.5rem sans-serif;
-  text-align: right;
-  margin: 2vh 10vh 0 0;
-}
-
-#theAuthor {}
-
-.buttons {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 2vh 5vw;
-}
-
-.button {
-  flex: 0 1 auto;
-  background-color: cornflowerblue;
-  color: antiquewhite;
-  margin: 0.5vh 0 0;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.button:hover {opacity: 0.7}
-
-#newQuote {
-  margin-left: auto;
-  margin-right: 1vw;
 }

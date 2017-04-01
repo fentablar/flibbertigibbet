@@ -16,31 +16,25 @@
     <script src="js/randomQuoteGenerator.js"></script>
   </head>
   <body>
+    <div class="a-block">
+      <div class="quote"><span id="theQuote"></span></div>
+      <div class="author"><span id="theAuthor"></span></div>
+    </div>
+    <div class="b-block">
+      <div class="replay">
+        <span id="nextQuote"></span>
+      </div>
+      <div class="tweet">
+        <a id="tweetLink" target="_blank">
+          <span id="tweetQuote"></span>
+        </a>
+      </div>
+    </div>
     <header>
-      <span>quotes at random</span>
+      <span id="headerText"></span>
     </header>
-    <main>
-      <div class="quoteBlock">
-        <div class="quoteText">
-        &ldquo;<span id="theQuote"></span>&rdquo;
-        </div>
-        <div class="quoteAuth">
-        &sim;&ensp;<span id="theAuthor"></span>&ensp;&sim;
-        </div>
-      </div>
-      <div class="buttons">
-        <div class="button" id="newQuote">
-        <span>reload</span>
-        </div>
-        <div class="button">
-          <a id="tweetQuote" title="tweet this!" target="_blank">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-    </main>
     <footer>
-      <span>page by fentablar</span>
+      <span id="footerText"></span>
     </footer>
   </body>
 </html>

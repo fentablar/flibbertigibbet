@@ -1,5 +1,4 @@
 var currQuote = "", currAuth = "", currCat = "";
-var quoteURL = "http://quotes.stormconsultancy.co.uk/quotes/random.json?callback=";
 function loadQuote() {
   $.ajax({
     headers: {
@@ -15,11 +14,11 @@ function loadQuote() {
       $("#theQuote").html(currQuote);
       $("#theAuthor").html(currAuth);
       $("#theCat").html(currCat);
-      $("#tweetQuote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&via=fentablar&text=' + encodeURIComponent('"' + currQuote + '" ' + currAuth));
+      $("#tweetLink").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&via=fentablar&text=' + encodeURIComponent('\u201C' + currQuote + '\u201D ' + currAuth));
     }
   });
 }
-$(document).ready(function () {
+$(document).ready(function() {
   loadQuote();
-  $("#newQuote").on("click", loadQuote);
+  $("#nextQuote").on("click", loadQuote);
 });
