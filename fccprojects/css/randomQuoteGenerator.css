@@ -32,7 +32,7 @@ div {
 }
 
 .quoteBox {
-  flex: 1 1 50%;
+  flex: 1.5 1 40%;
   align-items: flex-end;
   font-family: "Sorts Mill Goudy", serif;
   font-size: 2rem;
@@ -42,21 +42,21 @@ div {
 #theQuote:after {content: "\201D"}
 
 .authorBox {
-  flex: 1 1 12%;
+  flex: 1 1 8%;
   align-items: center;
   font-family: "Quicksand", sans-serif;
   font-size: 1.75rem;
 }
 
 .iterateButton {
-  flex: 1 1 10%;
+  flex: 1 1 5%;
   align-items: center;
   letter-spacing: 3px;
   font-size: 1.25rem;
 }
 
 .tweetButton {
-  flex: 1 1 10%;
+  flex: 1 1 15%;
   font-size: 1rem;
 }
 
@@ -68,3 +68,15 @@ div {
 
 #iterateQuote:before {content: "ITERATE"}
 #tweetQuote:before {content: "share via twitter"}
+
+@media (max-width: 640px), (max-height: 640px) {
+  header, footer {font-size: 0.8rem}
+  .quoteBox {font-size: 1.5rem}
+  .authorBox {font-size: 1.25rem}
+  .iterateButton {font-size: 1rem}
+}
+
+@media (max-width: 480px), (max-height: 480px) {
+  .quoteBox {font-size: 1.25rem}
+  .authorBox {font-size: 1.1rem}
+}
