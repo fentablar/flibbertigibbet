@@ -27,7 +27,7 @@ header:before {content: "quotes at random"}
 div {
   display: flex;
   justify-content: center;
-  padding: 0 5vw;
+  padding: 0 10vw;
   text-align: center;
 }
 
@@ -70,6 +70,7 @@ div {
 #tweetQuote:before {content: "share via twitter"}
 
 @media (max-width: 640px), (max-height: 640px) {
+  div {padding: 0 5vw}
   header, footer {font-size: 0.8rem}
   .quoteBox {font-size: 1.5rem}
   .authorBox {font-size: 1.25rem}
@@ -77,6 +78,7 @@ div {
 }
 
 @media (max-width: 480px), (max-height: 480px) {
+  div {padding: 0 2vw}
   .quoteBox {font-size: 1.25rem}
   .authorBox {font-size: 1.1rem}
 }
