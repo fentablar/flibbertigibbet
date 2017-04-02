@@ -1,4 +1,102 @@
 var currQuote = "", currAuth = "", currCat = "";
+var colorScheme = 0, colorHtml = "", colorBG = "";
+var colorBodTxt = "", colorHdFt = "", colorButt = "";
+
+function setColorScheme() {
+  switch(colorScheme) {
+    case 1:
+    colorHtml = "maroon";
+    colorBG = "saddlebrown";
+    colorBodTxt = "navajowhite";
+    colorHdFt = "maroon";
+    colorButt = "sandybrown";
+    break;
+    case 2:
+    colorHtml = "olive";
+    colorBG = "papayawhip";
+    colorBodTxt = "seagreen";
+    colorHdFt = "yellowgreen";
+    colorButt = "olive";
+    break;
+    case 3:
+    colorHtml = "darkturquoise";
+    colorBG = "steelblue";
+    colorBodTxt = "cyan";
+    colorHdFt = "deepskyblue";
+    colorButt = "darkturquoise";
+    break;
+    case 4:
+    colorHtml = "darkgray";
+    colorBG = "gainsboro";
+    colorBodTxt = "gray";
+    colorHdFt = "darkgray";
+    colorButt = "darkslategray";
+    break;
+    case 5:
+    colorHtml = "indianred";
+    colorBG = "firebrick";
+    colorBodTxt = "bisque";
+    colorHdFt = "indianred";
+    colorButt = "lightcoral";
+    break;
+    case 6:
+    colorHtml = "peru";
+    colorBG = "navajowhite";
+    colorBodTxt = "saddlebrown";
+    colorHdFt = "peru";
+    colorButt = "sienna";
+    break;
+    case 7:
+    colorHtml = "darkgreen";
+    colorBG = "seagreen";
+    colorBodTxt = "papayawhip";
+    colorHdFt = "darkgreen";
+    colorButt = "yellowgreen";
+    break;
+    case 8:
+    colorHtml = "steelblue";
+    colorBG = "cyan";
+    colorBodTxt = "steelblue";
+    colorHdFt = "dodgerblue";
+    colorButt = "midnightblue";
+    break;
+    case 9:
+    colorHtml = "gainsboro";
+    colorBG = "darkslategray";
+    colorBodTxt = "gainsboro";
+    colorHdFt = "gray";
+    colorButt = "darkgray";
+    break;
+    case 10:
+    colorHtml = "firebrick";
+    colorBG = "bisque";
+    colorBodTxt = "indianred";
+    colorHdFt = "lightcoral";
+    colorButt = "firebrick";
+    break;
+  }
+}
+
+function initColorScheme() {
+  colorScheme = Math.floor(Math.random() * 10 + 1);
+  setColorScheme();
+  $("html").css("background-color", colorHtml);
+}
+
+function nextColorScheme() {
+  if(colorScheme === 10) {
+    colorScheme = 1;
+  } else {
+    colorScheme += 1;
+  }
+  setColorScheme();
+}
+
+function retrieveColors() {
+  $("body").css({"background-color": colorBG, "color": colorBodTxt});
+  $("header, footer").css({"color": colorHdFt});
+  $("#iterateQuote, #tweetQuote").css({"color": colorButt});
+}
 
 function setHeaderText() {
   switch(currCat) {
@@ -44,13 +142,17 @@ function loadQuote() {
       $("#iterateQuote").html("iterate");
       $("#tweetQuote").html("share via twitter");
       $("#tweetLink").attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('\u201C' + currQuote + '\u201D ' + currAuth) + '&hashtags=' + setTwitterHash() + '&via=fentablar');
+      retrieveColors();
       $("body").animate({
         opacity: 1
       }, 375);
+      $("html").css("background-color", colorHtml);
+      nextColorScheme();
     }
   });
 }
 $(document).ready(function() {
+  initColorScheme();
   loadQuote();
   $("#iterateQuote").on("click", loadQuote);
 });
