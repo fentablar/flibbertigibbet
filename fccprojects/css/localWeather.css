@@ -1,0 +1,71 @@
+* {box-sizing: border-box}
+
+body {
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: #202020;
+  color: gainsboro;
+  font-size: 1rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1, .locale, .currWeather, .cwTemp, .cwCon, #climeIcon, #currCondition,
+.tempUnitOption, #setTempMetric, #setTempImperial {
+  margin: 5px;
+}
+
+h1:before {content: "Current Weather in Your Area"}
+
+.locale {
+  font: bold 1.25rem sans-serif;
+}
+
+.currWeather {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#currTemp {font-size: 4rem; letter-spacing: -1px}
+
+#climeIcon {font-size: 2.25rem; text-align: center}
+
+#currCondition {font-size: 0.75rem; font-style: italic}
+
+..tempUnitOption {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.dtWeather, #syncTime {
+  margin: 15px;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: gray;
+}
+
+.cwCon {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#setTempMetric, #setTempImperial {
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  color: gray;
+  font-size: 0.75rem;
+}
+footer:before {content: "page by fentablar"}
