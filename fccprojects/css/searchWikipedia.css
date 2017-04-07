@@ -1,0 +1,124 @@
+* {box-sizing: border-box}
+
+a {
+  color: #004d00;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  font-family: sans-serif;
+  background-color: #202020;
+  color: gainsboro;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  width: 90vw;
+  min-width: 300px;
+  max-width: 720px;
+}
+
+.mainTitle {
+  margin: 10px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.mainTitle:before {content: "check Wikipedia"}
+
+.buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.buttDesc, .butt {
+  padding: 3px;
+  vertical-align: middle;
+}
+
+.butt {
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+}
+
+#searchDesc:before {content: "perform a"}
+#searchButt:before {content: "search"}
+#ranDesc:before {content: "get an article at"}
+#ranButt:before {content: "random"}
+
+#searchButt:hover, #ranButt:hover {
+  cursor: pointer;
+  background-color: gainsboro;
+  color: #202020;
+}
+
+.searchForm {
+  width: 100%;
+  margin: 10px 0;
+}
+#searchBox {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.results {
+  margin: 10px 0;
+}
+
+.results > p {
+  margin: 20px;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.resultItem {
+  padding: 10px;
+  background-color: gainsboro;
+  color: #202020;
+  border: 1px solid #202020;
+  border-radius: 5px;
+}
+
+.resultItem h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resultItem p {
+  margin: 5px;
+  font-style: italic;
+  line-height: 115%;
+  color: darkslategray;
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    font-size: 0.75rem;
+  }
+
+  .results > p {
+    font-size: 1rem;
+  }
+
+  .resultItem h2 {
+    font-size: 1rem;
+  }
+
+  .resultItem p {
+    font-size: 0.75rem;
+    line-height: 110%;
+  }
+}
