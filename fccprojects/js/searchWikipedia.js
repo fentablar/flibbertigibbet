@@ -19,13 +19,14 @@ function wikiSearch() {
 }
 
 $(document).ready(function() {
-  $("#searchBox").attr("placeholder", "search Wikipedia");
+  $("#searchBox").attr("placeholder", "search for...");
   $("#ranButt").click(function() {
     window.open("https://en.wikipedia.org/wiki/Special:Random")
   });
   $("#searchButt").click(function() {
     searchTerm = $("#searchBox").val();
     if(searchTerm !== '') {
+      $(".results").empty();
       wikiSearch();
     }
   });
@@ -33,6 +34,7 @@ $(document).ready(function() {
     searchTerm = $("#searchBox").val();
     if(event.keyCode === 13) {
       if(searchTerm !== '') {
+        $(".results").empty();
         wikiSearch();
       }
     }
