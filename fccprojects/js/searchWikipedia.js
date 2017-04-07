@@ -33,8 +33,8 @@ $(document).ready(function() {
   $("#searchBox").keyup(function(event) {
     searchTerm = $("#searchBox").val();
     if(event.keyCode === 13) {
+      $(".results").empty();
       if(searchTerm !== '') {
-        $(".results").empty();
         wikiSearch();
       }
     }
