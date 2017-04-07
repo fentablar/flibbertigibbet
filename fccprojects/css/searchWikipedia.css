@@ -5,7 +5,6 @@ a {
 }
 
 body {
-  min-height: 100vh;
   display: flex;
   flex-flow: column;
   font-family: sans-serif;
