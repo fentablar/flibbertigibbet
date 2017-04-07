@@ -27,7 +27,7 @@ main {
   font-size: 2rem;
 }
 
-.mainTitle:before {content: "check Wikipedia"}
+.mainTitle:before {content: "let's check Wikipedia"}
 
 .buttons {
   display: flex;
