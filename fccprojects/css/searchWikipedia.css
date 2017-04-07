@@ -16,7 +16,7 @@ body {
 main {
   display: flex;
   flex-flow: column;
-  margin: auto;
+  margin: 10px auto auto;
   width: 90vw;
   min-width: 300px;
   max-width: 720px;
