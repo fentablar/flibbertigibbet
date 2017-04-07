@@ -79,7 +79,7 @@ main {
 }
 
 .resultItem {
-  padding: 10px;
+  padding: 0 10px 10px;
   background-color: gainsboro;
   color: #202020;
   border: 1px solid #202020;
