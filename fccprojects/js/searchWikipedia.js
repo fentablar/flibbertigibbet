@@ -25,8 +25,8 @@ $(document).ready(function() {
   });
   $("#searchButt").click(function() {
     searchTerm = $("#searchBox").val();
+    $(".results").empty();
     if(searchTerm !== '') {
-      $(".results").empty();
       wikiSearch();
     }
   });
