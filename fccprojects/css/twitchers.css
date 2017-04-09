@@ -7,13 +7,18 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 main {
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
   max-width: 800px;
   border: 1px solid gainsboro;
-  border-radius: 5%;
+  border-radius: 1rem;
 }
 
 header:before {content: "twitchers"}
@@ -27,13 +32,11 @@ header {
 
 footer:before {content: "page by fentablar"}
 footer {
-  position: relative;
-  top: 10px;
   padding: 5px;
   text-align: center;
   text-transform: lowercase;
   color: #696969;
-  font-family: "Wallpoet", sans-serif;
+  font-family: "Black Ops One", serif;
   font-size: 0.8rem;
 }
 
@@ -51,7 +54,7 @@ footer {
   min-width: 5rem;
   padding: 5px;
   border: 1px solid gainsboro;
-  border-radius: 5%;
+  border-radius: 0.5rem;
   text-align: center;
   text-transform: lowercase;
   font-family: "Gruppo", sans-serif;
@@ -69,9 +72,9 @@ footer {
 
 .twitcher {
   width: 100%;
-  height: 60px;
+  height: 65px;
   margin: 2px 0;
-  padding: 0 5px;
+  padding: 5px;
   display: flex;
   flex-flow: row nowrap;
   font-family: "Roboto Mono", monospace;
@@ -84,7 +87,7 @@ footer {
 }
 
 .offline:hover {background-color: gray}
-.offline {
+.offline, .unknown {
   background-color: #606060;
   color: silver;
 }
@@ -93,14 +96,22 @@ footer {
   margin: auto 0;
 }
 
+.logoIMG {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 0.25rem;
+}
+
 .userName {
   padding: 5px;
   font-size: 0.9rem;
+  word-break: break-all;
+  width: 150px;
 }
 
 .streamInfo {
   margin: auto;
-  min-width: 5%;
+  min-width: 5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
@@ -117,29 +128,14 @@ footer {
   display: none;
 }
 
-.logoIMG {
-  max-width: 50px;
-  max-height: 50px;
-  border-radius: 25%
-}
-
 .game {font-weight: bold}
 
-@media (min-width: 401px) {
-  main {
-    border-radius: 5%;
-  }
+@media (min-width: 641px) {
   .chanStatus {
     display: initial;
   }
 }
 /*
-@media (min-width: 481px) {
-  main {
-    border-radius: 3%;
-  }
-}
-
 @media (min-width: 561px) {
   main {
     border-radius: 2%;
