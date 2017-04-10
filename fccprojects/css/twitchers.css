@@ -110,7 +110,7 @@ footer {
 }
 
 .streamInfo {
-  margin: auto 15px;
+  margin: auto;
   min-width: 5rem;
   overflow: hidden;
   text-overflow: ellipsis;
