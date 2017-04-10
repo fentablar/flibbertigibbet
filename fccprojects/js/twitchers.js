@@ -1,7 +1,5 @@
 var twitchers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404", "test_channel", "fentablar"];
 
-
-
 function twitchLink(inst, user) {
   return "https://wind-bow.gomix.me/twitch-api/" + inst + "/" + user + "?callback=?";
 }
