@@ -110,7 +110,7 @@ footer {
 }
 
 .streamInfo {
-  margin: auto;
+  margin: auto 15px;
   min-width: 5rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -130,7 +130,7 @@ footer {
 
 .game {font-weight: bold}
 
-@media (min-width: 641px) {
+@media (min-width: 561px) {
   .chanStatus {
     display: initial;
   }
