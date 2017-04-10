@@ -1,57 +1,46 @@
 var twitchers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404", "test_channel", "fentablar"];
 
+
+
+function twitchLink(inst, user) {
+  return "https://wind-bow.gomix.me/twitch-api/" + inst + "/" + user + "?callback=?";
+}
+
 function reapTwitchData() {
-  twitchers.forEach(function(twitcher) {
-    var twitcherStatus, twitcherURL, twitcherLogo, twitcherDispName, twitcherHTML;
-    function twitchLink(inst, user) {
-      return "https://wind-bow.gomix.me/twitch-api/" + inst + "/" + user + "?callback=?";
-    }
-    $.getJSON(twitchLink("users", twitcher), function(data) {
-      if(data.error !== undefined) {
-        twitcherStatus = "unknown";
-        twitcherLogo = "http://www.fillmurray.com/g/50/50";
-        twitcherDispName = twitcher;
-        twitcherHTML = "<div class='twitcher " + twitcherStatus +
-        "'><div class='userLogo'><img class='logoIMG' src=" +
-        twitcherLogo + "></div><div class='userName'><span>" +
-        twitcherDispName + "</span></div>" +
-        "<div class='streamInfo'><div class='userOffline'><span>" +
-        data.message + "</span></div></div></div>";
-        $("#twitchBox").append(twitcherHTML);
-      } else {
-        $.getJSON(twitchLink("streams", twitcher), function(data) {
-          if(data.stream !== null) {
-            twitcherStatus = "online";
-            twitcherURL = data.stream.channel.url;
-            twitcherLogo = data.stream.channel.logo !== null ? data.stream.channel.logo : "http://www.fillmurray.com/g/50/50";
-            twitcherDispName = data.stream.channel.display_name;
-            twitcherHTML = "<div class='twitcher " + twitcherStatus +
-            "'><div class='userLogo'><img class='logoIMG' src=" +
-            twitcherLogo + "></div><div class='userName'><a href=" +
-            twitcherURL + " target='_blank'>" +
-            twitcherDispName + "</a></div>" +
-            "<div class='streamInfo'><div class='game'><a href=" +
-            twitcherURL + " target='_blank'>" + data.stream.channel.game +
-            "</a></div><div class='chanStatus'><span>" +
-            data.stream.channel.status + "</span></div></div></div>";
-            $("#twitchBox").append(twitcherHTML);
+  twitchers.forEach(function(twitch) {
+    $.getJSON(twitchLink("users", twitch), function(usrData) {
+      var usrError = usrData.error;
+      var usrErrMess = usrData.message;
+      var usrLogo = usrData.logo == null ? "http://www.fillmurray.com/g/50/50" : usrData.logo;
+      var dispName = usrData.display_name === undefined ? twitch : usrData.display_name;
+      var logoHtml = "<div class='userLogo'><img class='logoIMG' src=" +
+      usrLogo + "></div>";
+      $.getJSON(twitchLink("channels", twitch), function(chanData) {
+        var chanUrl = chanData.url;
+        var usrNmHtml = chanData.error !== undefined ?
+        "<span>" + dispName + "</span>" :
+        "<a href=" + chanUrl + " target='_blank'>" + dispName + "</a>";
+        $.getJSON(twitchLink("streams", twitch), function(strmData) {
+          var twitchClass = strmData.stream == null ? "offline" : "online";
+          var strmGame = strmData.stream != null ? strmData.stream.channel.game : "";
+          var strmDtls = strmData.stream != null ? strmData.stream.channel.status : "";
+          var strmInfo;
+          if(usrError !== undefined) {
+            strmInfo = "<div class='userOffline'><span>" + usrErrMess +
+            "</span></div>";
+          } else if(twitchClass === "offline") {
+            strmInfo = "<div class='userOffline'><span>Offline</span></div>";
           } else {
-            $.getJSON(twitchLink("channels", twitcher), function(data) {
-              twitcherStatus = "offline";
-              twitcherURL = data.url;
-              twitcherLogo = data.logo !== null ? data.logo : "http://www.fillmurray.com/g/50/50";
-              twitcherDispName = data.display_name;
-              twitcherHTML = "<div class='twitcher " + twitcherStatus +
-              "'><div class='userLogo'><img class='logoIMG' src=" +
-              twitcherLogo + "></div><div class='userName'><a href=" +
-              twitcherURL + " target='_blank'>" +
-              twitcherDispName + "</a></div>" +
-              "<div class='streamInfo'><div class='userOffline'><span>Offline</span></div></div></div>";
-              $("#twitchBox").append(twitcherHTML);
-            });
+            strmInfo = "<div class='game'><a href=" + chanUrl + " target='_blank'>" +
+            strmGame + "</a></div><div class='chanStatus'><span>" +
+            strmDtls + "</span></div>";
           }
+          var twitcherHtml = "<div class='twitcher " + twitchClass + "'>" +
+          logoHtml + "<div class='userName'>" + usrNmHtml + "</div>" +
+          "<div class='streamInfo'>" + strmInfo + "</div></div>";
+          $("#twitchBox").append(twitcherHtml);
         });
-      }
+      });
     });
   });
 }
