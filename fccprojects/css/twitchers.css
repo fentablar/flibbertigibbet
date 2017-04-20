@@ -135,16 +135,3 @@ footer {
     display: initial;
   }
 }
-/*
-@media (min-width: 561px) {
-  main {
-    border-radius: 2%;
-  }
-}
-
-@media (min-width: 641px) {
-  main {
-    border-radius: 1%;
-  }
-}
-*/
