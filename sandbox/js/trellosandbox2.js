@@ -19,6 +19,11 @@ var reapTrelloData = function() {
   return $.holdReady(false);
 };
 
+var trelloAuthFail = function() {
+  console.log("trello auth fail");
+  return $.holdReady(false);
+}
+
 Trello.authorize( {
   type: "popup",
   name: "chingu raccoons xtal",
