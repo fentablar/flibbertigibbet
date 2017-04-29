@@ -1,5 +1,9 @@
 $.holdReady(true);
 
+$(document).ready(function() {
+  console.log("document ready");
+});
+
 var reapTrelloData = function() {
   Trello.get("members/me/boards", function(boardData) {
     for (var bd = 0; bd < boardData.length; bd++) {
@@ -34,8 +38,4 @@ Trello.authorize( {
   expiration: "never",
   success: reapTrelloData,
   error: trelloAuthFail
-});
-
-$(document).ready(function() {
-  console.log("document ready");
 });
