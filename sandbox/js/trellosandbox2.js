@@ -1,4 +1,5 @@
 $.holdReady(true);
+console.log("doc held");
 
 $(document).ready(function() {
   console.log("document ready");
@@ -14,11 +15,11 @@ var reapTrelloData = function() {
           Trello.get("lists/" + listData[ld].id + "/cards", function(cardData) {
             for (var cd = 0; cd < cardData.length; cd++) {
               console.log("card " + cardData[cd].id);
-            }
+            } return "cards loaded";
           }, function() { console.log("card load failed"); });
-        }
+        } return "lists loaded";
       }, function() { console.log("list load failed"); });
-    }
+    } return "boards loaded";
   }, function() { console.log("board load failed"); });
   return $.holdReady(false);
 };
