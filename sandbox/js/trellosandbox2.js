@@ -15,11 +15,11 @@ var reapTrelloData = function() {
           Trello.get("lists/" + listData[ld].id + "/cards", function(cardData) {
             for (var cd = 0; cd < cardData.length; cd++) {
               console.log("card " + cardData[cd].id);
-            } return "cards loaded";
+            } console.log("cards loaded");
           }, function() { console.log("card load failed"); });
-        } return "lists loaded";
+        } console.log("lists loaded");
       }, function() { console.log("list load failed"); });
-    } return "boards loaded";
+    } console.log("boards loaded");
   }, function() { console.log("board load failed"); });
   return $.holdReady(false);
 };
