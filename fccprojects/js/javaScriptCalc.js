@@ -156,7 +156,7 @@ $(function() {
     else { decExp = decValB; }
     result = ((numValA * (10 ** decExp)) + (numValB * (10 ** decExp))) / (10 ** decExp);
     if (result.toString().length > 10) {
-      agg = result.toPrecision(8);
+      agg = result.toPrecision(10);
     }
     else { agg = result.toString(); }
   }
@@ -167,7 +167,7 @@ $(function() {
     else { decExp = decValB; }
     result = ((numValA * (10 ** decExp)) - (numValB * (10 ** decExp))) / (10 ** decExp);
     if (result.toString().length > 10) {
-      agg = result.toPrecision(8);
+      agg = result.toPrecision(10);
     }
     else { agg = result.toString(); }
   }
@@ -176,7 +176,7 @@ $(function() {
     var numValA = Number(valA), numValB = Number(valB), result;
     result = ((numValA * (10 ** decValA)) * (numValB * (10 ** decValB))) / (10 ** (decValA + decValB));
     if (result.toString().length > 10) {
-      agg = result.toPrecision(8);
+      agg = result.toPrecision(10);
     }
     else { agg = result.toString(); }
   }
@@ -187,7 +187,7 @@ $(function() {
     else { decExp = decValB; }
     result = (numValA * (10 ** decExp)) / (numValB * (10 ** decExp));
     if (result.toString().length > 10) {
-      agg = result.toPrecision(8);
+      agg = result.toPrecision(10);
     }
     else { agg = result.toString(); }
   }
