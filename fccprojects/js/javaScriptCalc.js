@@ -50,11 +50,12 @@ $(function() {
       }
       if (!reset) {
         if (operation !== "" && valA !== "" && curr !== "") {
-          hist = hist.concat(curr, "\u2002", sel, "\u2002");
-          $("#combInput").html(hist);
           setValB(curr);
           calcAgg();
           $("#currInput").html(agg);
+          if (hist.length > 92) { hist = agg + "\u2002" + sel + "\u2002"; }
+          else { hist = hist.concat(curr, "\u2002", sel, "\u2002"); }
+          $("#combInput").html(hist);
           setValA(agg);
           valB = "", decValB = 0, curr = "";
           setOp();
