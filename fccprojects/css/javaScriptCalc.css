@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+
+body {
+  background-color: #303030;
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 270px;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid #202020;
+  border-radius: 5px;
+  background-color: gainsboro;
+}
+
+.rechner {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(7, 50px);
+}
+
+.output {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+  border: 1px solid #202020;
+  background-color: whitesmoke;
+  text-align: right;
+}
+
+.currEntry {
+  height: 35%;
+  padding: 5px;
+}
+
+.combEntry {
+  height: 65%;
+  padding: 5px;
+}
+
+#combInput, #currInput {
+  margin: auto 0;
+}
+
+#combInput {
+  font-size: 1rem;
+  color: gray;
+}
+
+#currInput {
+  font-size: 1.75rem;
+}
+
+button {
+  font-size: 1.25rem;
+  background-color: #E8E8E8;
+  color: #202020;
+  border-radius: 3px;
+}
+
+#equals {
+  grid-column: 4;
+  grid-row: 6 / span 2;
+}
+
+#zero {
+  grid-column: 1 / span 2;
+  grid-row: 7;
+}
