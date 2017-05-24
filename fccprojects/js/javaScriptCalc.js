@@ -33,6 +33,7 @@ $(function() {
     }
 
     else if (sel === ".") {
+      if (reset) { clearAll(); }
       if (curr === "") {
         curr = curr.concat("0", sel);
         $("#currInput").html(curr);
