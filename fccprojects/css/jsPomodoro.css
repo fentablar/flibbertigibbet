@@ -1,0 +1,160 @@
+* { box-sizing: border-box; }
+
+body {
+  background-color: #303030;
+  color: #E8E8E8;
+  font-family: sans-serif;
+  height: 100vh; width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px 250px;
+  grid-template-rows: repeat(3, 100px);
+}
+
+.clock {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counter {
+  margin: 0 0 5px;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.counterTitle {
+  text-align: right;
+}
+
+#sessionCount {
+  font-size: 2rem;
+}
+
+#sessionTitle:before {
+  content: "sessions\003A ";
+}
+
+#cycleTitle:before {
+  content: "cycles\003A ";
+}
+
+#clockAction {
+  margin: 10px 0 20px;
+}
+
+#timer {
+  font-size: 6rem;
+}
+
+#startReset {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#startReset:before {
+  content: "start\2002 \007C \2002 reset"
+}
+
+#startReset:hover {
+  background-color: gainsboro;
+  color: #303030;
+}
+
+.period {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.perTitle {
+  padding: 5px;
+}
+
+#workPeriod {
+  justify-content: flex-end;
+}
+
+#shortBreak {
+  justify-content: center;
+}
+
+#longBreak {
+  justify-content: flex-start;
+}
+
+.perTitle {
+  font-size: 1.25rem;
+}
+
+#workTitle:before {
+  content: "Session Length\2002 \0028 minutes\0029"
+}
+
+#shrtBrkTitle:before {
+  content: "Short Break\2002 \0028 minutes\0029"
+}
+
+#lngBrkTitle:before {
+  content: "Long Break\2002 \0028 minutes\0029"
+}
+
+.interval {
+  font-size: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.interval:hover {
+  color: dodgerblue;
+}
+
+.intMins {
+  width: 75px;
+  text-align: center;
+}
+
+.intAdj {
+  cursor: pointer;
+}
+
+.intSub:before {
+  content: "\2013 ";
+}
+
+.intAdd:before {
+  content: "\002B ";
+}
+
+.myTurn {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.noTouch:hover {
+  color: crimson;
+}

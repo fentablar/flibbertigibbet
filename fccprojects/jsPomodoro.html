@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>JavaScript Pomodoro Clock</title>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../img_global/volume_integral_u2230_icon_64x64.png">
+  <link rel="stylesheet" type="text/css" href="../css_global/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/jsPomodoro.css">
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="js/jsPomodoro.js"></script>
+</head>
+<body>
+  <main>
+    <div class="clock">
+      <div id="counterSessionCycle">
+        <div class="counter" id="sessions">
+          <div class="counterTitle" id="sessionTitle">
+          </div>
+          <div class="counterCount" id="sessionCount"></div>
+        </div>
+        <div class="counter" id="cycles">
+          <div class="counterTitle" id="cycleTitle"></div>
+          <div class="counterCount" id="cycleCount"></div>
+        </div>
+      </div>
+      <div id="clockTime">
+        <div id="timer"></div>
+      </div>
+      <div id="clockAction">
+        <div id="startReset"></div>
+      </div>
+    </div>
+    <div class="period" id="workPeriod">
+      <div class="perTitle" id="workTitle"></div>
+      <div class="interval" id="workInterval">
+        <div class="intAdj intSub" id="workSub"></div>
+        <div class="intMins" id="workMins"></div>
+        <div class="intAdj intAdd" id="workAdd"></div>
+      </div>
+    </div>
+    <div class="period" id="shortBreak">
+      <div class="perTitle" id="shrtBrkTitle"></div>
+      <div class="interval" id="shrtBrkInterval">
+        <div class="intAdj intSub" id="shrtBrkSub"></div>
+        <div class="intMins" id="shrtBrkMins"></div>
+        <div class="intAdj intAdd" id="shrtBrkAdd"></div>
+      </div>
+    </div>
+    <div class="period" id="longBreak">
+      <div class="perTitle" id="lngBrkTitle"></div>
+      <div class="interval" id="lngBrkInterval">
+        <div class="intAdj intSub" id="lngBrkSub"></div>
+        <div class="intMins" id="lngBrkMins"></div>
+        <div class="intAdj intAdd" id="lngBrkAdd"></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
