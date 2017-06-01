@@ -194,6 +194,7 @@ function cTurn() {
       }
       else cPlay = 4;
     }
+    else if (board[4] === tknUser && board[8] === tknUser) cPlay = 2;
     else if (!board[1] && !board[3] && !board[5] && !board[7]) cPlay = 1;
     else if (board[0] === tknUser &&
             board[5] === tknUser ||
