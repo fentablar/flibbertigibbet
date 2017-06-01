@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../img_global/volume_integral_u2230_icon_64x64.png">
+  <link rel="stylesheet" type="text/css" href="../css_global/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/jsTicTacToe.css">
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="js/jsTicTacToe.js"></script>
+</head>
+<body>
+  <header>
+    <span>Tic&nbsp;Tac&nbsp;Toe</span>
+  </header>
+  <div id="tokenChoice">
+    <div class="chooseText">
+      <span>Choose one&colon;</span>
+    </div>
+    <div class="token" id="X">X</div>
+    <div class="token" id="O">O</div>
+  </div>
+  <section class="gameInfo hideMe">
+    <div id="gameStatus">Game&puncsp;Status</div>
+  </section>
+  <main class="hideMe">
+    <div class="tttBox" id="0"></div>
+    <div class="tttBox" id="1"></div>
+    <div class="tttBox" id="2"></div>
+    <div class="tttBox" id="3"></div>
+    <div class="tttBox" id="4"></div>
+    <div class="tttBox" id="5"></div>
+    <div class="tttBox" id="6"></div>
+    <div class="tttBox" id="7"></div>
+    <div class="tttBox" id="8"></div>
+  </main>
+  <section class="gameInfo hideMe">
+    <div class="winCount">
+      <div class="playerID" id="userID">
+        <span>You&colon;&puncsp;</span>
+      </div>
+      <div class="playerCnt" id="userCnt">
+        <span>0</span>
+      </div>
+    </div>
+    <div class="winCount">
+      <div class="playerID" id="tieID">
+        <span>Ties&colon;&puncsp;</span>
+      </div>
+      <div class="playerCnt" id="tieCnt">
+        <span>0</span>
+      </div>
+    </div>
+    <div class="winCount">
+      <div class="playerID" id="compID">
+        <span>Comp&colon;&puncsp;</span>
+      </div>
+      <div class="playerCnt" id="compCnt">
+        <span>0</span>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <span>designed&nbsp;and&nbsp;coded&nbsp;by&nbsp;David&nbsp;Jordan</span>
+  </footer>
+</body>
+</html>
