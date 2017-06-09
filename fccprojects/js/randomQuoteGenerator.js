@@ -132,9 +132,9 @@ function loadQuote() {
     },
     url: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=",
     success: function(quoteMeta) {
-      currQuote = JSON.parse(quoteMeta).quote;
-      currAuth = JSON.parse(quoteMeta).author;
-      currCat = JSON.parse(quoteMeta).category;
+      currQuote = quoteMeta.quote;
+      currAuth = quoteMeta.author;
+      currCat = quoteMeta.category;
       $("#headerText").html(setHeaderText);
       $("#footerText").html("page by fentablar");
       $("#theQuote").html('\u201C' + currQuote + '\u201D');
