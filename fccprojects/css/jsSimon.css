@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Aldrich|Allerta+Stencil|Michroma|Syncopate:400,700");
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #404040;
+  color: silver;
+  font-family: "Michroma", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+header, footer {
+  padding: 10px;
+  width: 100px;
+  position: fixed;
+  left: 0;
+  color: black;
+  opacity: 0.2;
+  z-index: -1;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+header {
+  top: 0;
+  font-size: 2rem;
+}
+
+footer {
+  bottom: 0;
+  font-size: 1rem;
+}
+
+main {
+  width: 500px;
+  height: 500px;
+  background-color: #303030;
+  border-radius: 100%;
+  padding: 20px;
+  margin: auto;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(2, 220px);
+  grid-template-columns: repeat(2, 220px);
+}
+
+.console {
+  width: 235px;
+  height: 235px;
+  border-radius: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #303030;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainButton, .ctrlButton { cursor: pointer; }
+
+.gameTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Syncopate", sans-serif;
+  text-transform: lowercase;
+  color: silver;
+  margin: 5px;
+  position: relative;
+}
+
+.consoleButtons {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.ctrlLabel {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+.ctrlButton {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: 2px solid grey;
+  border-radius: 100%;
+  background-color: #303030;
+}
+
+.ctrlBtnOn { border: 2px solid snow; }
+
+#start.ctrlBtnOn:active { border: 2px solid darkmagenta; }
+
+.counter {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#counterDisp {
+  width: 60px;
+  height: 50px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+  border-radius: 10px;
+  color: tomato;
+  font-size: 2rem;
+  font-family: "Allerta Stencil", monospace;
+}
+
+#green {
+  background-color: forestgreen;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: -25%;
+}
+
+#green.mainButton.act:active { background-color: #00b32d; }
+#green.mainButton.simon { background-color: #00b32d; }
+
+#red {
+  background-color: firebrick;
+  border-top-right-radius: 100%;
+}
+
+#red.mainButton.act:active { background-color: red; }
+#red.mainButton.simon { background-color: red; }
+
+#yellow {
+  background-color: gold;
+  border-bottom-left-radius: 100%;
+}
+
+#yellow.mainButton.act:active { background-color: #ffff4d; }
+#yellow.mainButton.simon { background-color: #ffff4d; }
+
+#blue {
+  background-color: slateblue;
+  border-bottom-right-radius: 100%;
+}
+
+#blue.mainButton.act:active { background-color: dodgerblue; }
+#blue.mainButton.simon { background-color: dodgerblue; }

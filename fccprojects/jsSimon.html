@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Simon Game</title>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../img_global/volume_integral_u2230_icon_64x64.png">
+  <link rel="stylesheet" type="text/css" href="../css_global/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/jsSimon.css">
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="js/jsSimon.js"></script>
+</head>
+<body>
+  <header>
+    <span>Simon&nbsp;Game</span>
+  </header>
+  <main>
+    <section class="console">
+      <div class="gameTitle">
+        <span>Simon</span>
+      </div>
+      <div class="consoleButtons">
+        <div class="controls" id="ctrlPower">
+          <div class="ctrlLabel" id="lblPower">
+            <span>power</span>
+          </div>
+          <div class="ctrlButton" id="power">
+          </div>
+        </div>
+        <div class="controls" id="ctrlStart">
+          <div class="ctrlLabel" id="lblStart">
+            <span>start</span>
+          </div>
+          <div class="ctrlButton" id="start">
+          </div>
+        </div>
+        <div class="controls" id="ctrlStrict">
+          <div class="ctrlLabel" id="lblStrict">
+            <span>strict</span>
+          </div>
+          <div class="ctrlButton" id="strict">
+          </div>
+        </div>
+      </div>
+      <div class="counter">
+        <div class="ctrlLabel">
+          <span>count</span>
+        </div>
+        <div id="counterDisp"></div>
+      </div>
+    </section>
+    <div class="mainButton" id="green"></div>
+    <div class="mainButton" id="red"></div>
+    <div class="mainButton" id="yellow"></div>
+    <div class="mainButton" id="blue"></div>
+  </main>
+  <footer>
+    <span>designed&nbsp;and&nbsp;coded&nbsp;by&nbsp;David&nbsp;Jordan</span>
+  </footer>
+</body>
+</html>
