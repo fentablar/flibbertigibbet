@@ -1,4 +1,5 @@
-header, nav, div, a, h1, h2, main, h3, p, figure, figcaption, img, footer, i, span  { box-sizing: border-box }
+* { box-sizing: border-box }
+
 header { background-color: darkblue }
 
 h1 {
@@ -30,14 +31,19 @@ figcaption {
   text-transform: uppercase;
 }
 
-a:link, a:visited { color: inherit; 
+a:link, a:visited { color: inherit;
   text-decoration: none }
 a:hover { color: dodgerblue }
 
+figcaption > a:hover {
+  color: firebrick;
+  font-weight: bold;
+}
+
 .headerNav {
   padding: 1vw;
-  display: flex; flex-flow: row wrap; 
-  justify-content: space-around; 
+  display: flex; flex-flow: row wrap;
+  justify-content: space-around;
   background-color: black; color: silver;
 }
 
@@ -61,7 +67,7 @@ a:hover { color: dodgerblue }
 
 .content {
   display: flex; flex-flow: column;
-  background-color: black; 
+  background-color: black;
   color: darkslategray;
 }
 
@@ -97,6 +103,11 @@ a:hover { color: dodgerblue }
 
 .projectFig > figcaption { margin-bottom: 1vw; text-indent: 3vw }
 .projectFig > img { width: 70vw }
+.projectFig > iframe {
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+}
 
 #contentContact { background-color: darkturquoise }
 
@@ -122,10 +133,10 @@ a:hover { color: dodgerblue }
 footer { background-color: darkmagenta }
 
 .footerBar {
-  display: flex; 
-  flex-flow: row wrap; 
-  justify-content: space-around; 
-  background-color: black; 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: black;
   color: silver;
   font-family: "Play", sans-serif;
 }
@@ -163,12 +174,12 @@ footer { background-color: darkmagenta }
     flex-flow: initial;
     justify-content: initial;
   } */
-    
+
   p {
     text-align: left;
     text-indent: 2vw;
   }
-  
+
   .content {
     background-color: black;
     color: darkslategray;
@@ -177,60 +188,73 @@ footer { background-color: darkmagenta }
     grid-gap: 2vw;
     grid-template-columns: 30vw minmax(60vw, 1fr);
   }
-  
+
   .content > div {
     border-radius: 1vw;
     padding: 2vw; margin: 0;
   }
-  
+
   .aboutCopy, .portfolioFigs, .contactLinks {
     margin: 0;
   }
 
-  
+
   #contentAbout {
     background-color: moccasin;
     grid-column: 1;
     grid-row: 1;
   }
-  
+
   #contentPortfolio {
     margin: 0;
     background-color: plum;
     grid-column: 2;
     grid-row: 1 / 4;
   }
-  
+
   .portfolioProjects {
     padding: 1vw 2vw;
     display: grid;
     grid-gap: 4vw;
   }
-  
+
   .projectFig > figcaption { text-indent: 3vw; margin-bottom: 0.75vw }
   .projectFig > img { margin: 0 auto; width: 100% }
-  
+  .projectFig > iframe {
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+  }
+
   #contentContact {
     background-color: darkturquoise;
     grid-column: 1;
     grid-row: 2;
   }
-  
+
   .contactLinks {
     display: grid;
   }
-  
+
   .linkFig {
     padding: 0;
   }
-  
+
   .linkFig > a :nth-child(n) {
     display: inline-block;
     margin: 1vw;
     vertical-align: middle;
   }
-  
+
   .linkFig img {
     height: 5vw;
+  }
+}
+
+@media (min-width: 1050px) {
+  .projectFig > iframe {
+    margin: 0 auto;
+    width: 600px;
+    height: 450px;
   }
 }
