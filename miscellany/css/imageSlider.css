@@ -1,0 +1,188 @@
+@import "../../css_global/reset.css";
+
+* {box-sizing: border-box}
+
+body {
+  cursor: default;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+  color: #404040;
+}
+
+main {
+  padding: 3vh 3vw;
+  min-width: 300px;
+}
+
+input {
+  display: none;
+}
+
+#figWrapOuter {
+  width: 100%;
+  overflow: hidden;
+}
+
+#figWrapInner {
+  width: 500%;
+  display: flex;
+  flex-flow: row nowrap;
+  transition: all 800ms ease-in-out;
+}
+
+figure {
+  flex: 0 0 20%;
+  margin: 0;
+  position: relative;
+}
+
+figure > img {
+  width: 100%;
+}
+
+figcaption {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: snow;
+  text-shadow: 2px 2px 3px black;
+}
+
+figcaption > h1 {
+  font-size: 1.75rem;
+}
+
+figcaption > h2 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+#ctrlWrap {
+  margin-top: 1.5vh;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+#ctrls {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.ctrl {
+  transition: all 500ms ease;
+}
+
+.ctrl {
+  margin: 0 15px;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ctrl:hover, label:hover, .active {
+  background-color: #404040;
+  color: whitesmoke;
+}
+
+#fig1:checked ~ #figWrapOuter > #figWrapInner {margin-left: 0}
+#fig2:checked ~ #figWrapOuter > #figWrapInner {margin-left: -100%}
+#fig3:checked ~ #figWrapOuter > #figWrapInner {margin-left: -200%}
+#fig4:checked ~ #figWrapOuter > #figWrapInner {margin-left: -300%}
+#fig5:checked ~ #figWrapOuter > #figWrapInner {margin-left: -400%}
+
+#fig1:checked ~ #ctrlWrap label:nth-child(2),
+#fig2:checked ~ #ctrlWrap label:nth-child(3),
+#fig3:checked ~ #ctrlWrap label:nth-child(4),
+#fig4:checked ~ #ctrlWrap label:nth-child(5),
+#fig5:checked ~ #ctrlWrap label:nth-child(1) {
+  position: absolute;
+  right: 15px;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 500ms ease;
+}
+
+#fig1:checked ~ #ctrlWrap label:nth-child(2)::before,
+#fig2:checked ~ #ctrlWrap label:nth-child(3)::before,
+#fig3:checked ~ #ctrlWrap label:nth-child(4)::before,
+#fig4:checked ~ #ctrlWrap label:nth-child(5)::before,
+#fig5:checked ~ #ctrlWrap label:nth-child(1)::before {
+  content: 'next\00A0 \226B';
+}
+
+#fig1:checked ~ #ctrlWrap label:nth-child(5),
+#fig2:checked ~ #ctrlWrap label:nth-child(1),
+#fig3:checked ~ #ctrlWrap label:nth-child(2),
+#fig4:checked ~ #ctrlWrap label:nth-child(3),
+#fig5:checked ~ #ctrlWrap label:nth-child(4) {
+  position: absolute;
+  left: 15px;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 500ms ease;
+}
+
+#fig1:checked ~ #ctrlWrap label:nth-child(5)::before,
+#fig2:checked ~ #ctrlWrap label:nth-child(1)::before,
+#fig3:checked ~ #ctrlWrap label:nth-child(2)::before,
+#fig4:checked ~ #ctrlWrap label:nth-child(3)::before,
+#fig5:checked ~ #ctrlWrap label:nth-child(4)::before {
+  content: '\226A \00A0 prev';
+}
+
+@media only screen and (max-width: 700px) {
+
+  #ctrlWrap {
+    font-size: 1.75rem;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  #ctrlWrap {
+    font-size: 1.5rem;
+  }
+
+  figcaption > h1 {
+    font-size: 1.5rem;
+  }
+
+  figcaption > h2 {
+    font-size: 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  #ctrlWrap {
+    font-size: 1.25rem;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  #ctrlWrap {
+    font-size: 1rem;
+  }
+
+  .ctrl {
+    margin: 0 10px;
+  }
+
+  figcaption > h1 {
+    font-size: 1.25rem;
+  }
+
+  figcaption > h2 {
+    font-size: 0.75rem;
+  }
+
+}

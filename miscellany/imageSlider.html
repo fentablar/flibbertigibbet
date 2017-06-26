@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>imageSlider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../img_global/volume_integral_u2230_icon_64x64.png">
+  <link rel="stylesheet" type="text/css" href="css/imageSlider.css">
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="js/imageSlider.js"></script>
+</head>
+<body>
+  <main>
+
+    <input checked type="radio" name="figs" id="fig1">
+    <input type="radio" name="figs" id="fig2">
+    <input type="radio" name="figs" id="fig3">
+    <input type="radio" name="figs" id="fig4">
+    <input type="radio" name="figs" id="fig5">
+
+    <section id="figWrapOuter">
+      <div id="figWrapInner">
+        <figure>
+          <img src="http://res.cloudinary.com/fentablar/image/upload/v1498433283/imageSlider/stabler_biletnikoff.jpg">
+          <figcaption>
+            <h1>Fred Biletnikoff &amp; Ken Stabler</h1>
+            <h2>Super Bowl XI champions</h2>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="http://res.cloudinary.com/fentablar/image/upload/v1498433283/imageSlider/HMS-Surprise.jpg">
+          <figcaption>
+            <h1>HMS Surprise</h1>
+            <h2>from the Aubrey&hyphen;Maturin series by Patrick O&apos;Brian</h2>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="http://res.cloudinary.com/fentablar/image/upload/v1498433283/imageSlider/killinger_investors_battle.jpg">
+          <figcaption>
+            <h1>Dr Heny Killinger battles The Investors</h1>
+            <h2>Venture Bros</h2>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="http://res.cloudinary.com/fentablar/image/upload/v1498433281/imageSlider/add.jpg">
+          <figcaption>
+            <h1>sometimes I get distracted</h1>
+            <h2>it&apos;s just like working in a fish market&comma; except you don&apos;t have to clean or gut fish all day</h2>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="http://res.cloudinary.com/fentablar/image/upload/v1498433284/imageSlider/pathfinder.jpg">
+          <figcaption>
+            <h1>also&hellip;</h1>
+            <h2>Pathfinder</h2>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="ctrlWrap">
+      <label for="fig1" id="1"></label>
+      <label for="fig2" id="2"></label>
+      <label for="fig3" id="3"></label>
+      <label for="fig4" id="4"></label>
+      <label for="fig5" id="5"></label>
+
+      <div id="ctrls">
+        <div class="ctrl" id="start">
+          <span>start</span>
+        </div>
+        <div>
+          <span>&vert;</span>
+        </div>
+        <div class="ctrl" id="stop">
+          <span>stop</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
