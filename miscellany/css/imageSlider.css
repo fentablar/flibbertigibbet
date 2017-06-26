@@ -10,8 +10,10 @@ body {
 }
 
 main {
+  margin: 0 auto;
   padding: 3vh 3vw;
   min-width: 300px;
+  max-width: 1000px;
 }
 
 input {
