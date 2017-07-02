@@ -84,6 +84,6 @@ $(function() {
       return obj;
     }
 
-    return getUser.then(getChannel).then(getStrem).then(setHtml);
+    return getUser.then(getChannel).then(getStream).then(setHtml);
   }
 });
