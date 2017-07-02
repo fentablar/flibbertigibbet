@@ -46,6 +46,7 @@ $(function() {
         obj.dispName = data.display_name === undefined ? twitch : data.display_name;
         obj.logoHtml = "<div class='userLogo'>" +
                         "<img class='logoIMG' src=" + obj.usrLogo + "></div>";
+        return obj;
       });
     }
 
