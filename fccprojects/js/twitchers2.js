@@ -8,8 +8,6 @@ $(function() {
 
   const twitcherData = twitchers.map(genTwitchData);
 
-  const defImg = "http://www.fillmurray.com/g/50/50";
-
   Promise.all(twitcherData).then(data => {
     for (let x of data) {
       $("#twitchBox").append(x.twitcherHtml);
@@ -38,6 +36,8 @@ $(function() {
   function genTwitchData(twitch) {
     const obj = {};
 
+    const defImg = "http://www.fillmurray.com/g/50/50";
+
     const getUser = $.getJSON(twitchLink("users", twitch)).then(data => {
       obj.usrError = data.error;
       obj.usrErrMess = data.message;
@@ -55,7 +55,7 @@ $(function() {
                       obj.dispName + "</a>";
     });
 
-    const getStream = $.getJSON(twitcLink("streams", twitch)).then(data => {
+    const getStream = $.getJSON(twitchLink("streams", twitch)).then(data => {
       obj.twitchClass = data.stream == null ? "offline" : "online";
       obj.strmGame = data.stream !== null ? data.stream.channel.game : "";
       obj.strmDtls = data.stream !== null ? data.stream.channel.status : "";
