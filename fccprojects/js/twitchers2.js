@@ -38,58 +38,52 @@ $(function() {
   function genTwitchData(twitch) {
     const obj = {};
 
-    function getUser(twitch) {
-      $.getJSON(twitchLink("users", twitch)).then(data => {
-        obj.usrError = data.error;
-        obj.usrErrMess = data.message;
-        obj.usrLogo = data.logo == null ? defImg : data.logo;
-        obj.dispName = data.display_name === undefined ? twitch : data.display_name;
-        obj.logoHtml = "<div class='userLogo'>" +
-                        "<img class='logoIMG' src=" + obj.usrLogo + "></div>";
-        return obj;
-      });
-    }
+    const getUser = $.getJSON(twitchLink("users", twitch)).then(data => {
+      obj.usrError = data.error;
+      obj.usrErrMess = data.message;
+      obj.usrLogo = data.logo == null ? defImg : data.logo;
+      obj.dispName = data.display_name === undefined ? twitch : data.display_name;
+      obj.logoHtml = "<div class='userLogo'>" +
+                      "<img class='logoIMG' src=" + obj.usrLogo + "></div>";
+    });
 
-    function getChannel(twitch) {
-      $.getJSON(twitchLink("channels", twitch)).then(data => {
-        obj.chanUrl = data.url;
-        obj.usrNmHtml = data.error !== undefined ?
-                        "<span>" + obj.dispName + "</span>" :
-                        "<a href=" + obj.chanUrl + " target='_blank'>" +
-                        obj.dispName + "</a>";
-      });
-    }
+    const getChannel = $.getJSON(twitchLink("channels", twitch)).then(data => {
+      obj.chanUrl = data.url;
+      obj.usrNmHtml = data.error !== undefined ?
+                      "<span>" + obj.dispName + "</span>" :
+                      "<a href=" + obj.chanUrl + " target='_blank'>" +
+                      obj.dispName + "</a>";
+    });
 
-    function getStream(twitch) {
-      $.getJSON(twitchLink("streams", twitch)).then(data => {
-        obj.twitchClass = data.stream == null ? "offline" : "online";
-        obj.strmGame = data.stream !== null ? data.stream.channel.game : "";
-        obj.strmDtls = data.stream !== null ? data.stream.channel.status : "";
-        if (obj.usrError !== undefined) {
-          obj.strmInfo = "<div class='userOffline'><span>" +
+    const getStream = $.getJSON(twitcLink("streams", twitch)).then(data => {
+      obj.twitchClass = data.stream == null ? "offline" : "online";
+      obj.strmGame = data.stream !== null ? data.stream.channel.game : "";
+      obj.strmDtls = data.stream !== null ? data.stream.channel.status : "";
+      if (obj.usrError !== undefined) {
+        obj.strmInfo = "<div class='userOffline'><span>" +
                           obj.usrErrMess + "</span></div>";
+      }
+      else {
+        if (obj.twitchClass === "offline") {
+          obj.strmInfo = "<div class='userOffline'><span>Offline</span></div>";
         }
         else {
-          if (obj.twitchClass === "offline") {
-            obj.strmInfo = "<div class='userOffline'><span>Offline</span></div>";
-          }
-          else {
-            obj.strmInfo = "<div class='game'><a href=" + obj.chanUrl +
-                            " target='_blank'>" + obj.strmGame + "</a></div>" +
-                            "<div class='chanStatus'>" +
-                            "<span>" + obj.strmDtls + "</span></div>";
-          }
+          obj.strmInfo = "<div class='game'><a href=" + obj.chanUrl +
+                          " target='_blank'>" + obj.strmGame + "</a></div>" +
+                          "<div class='chanStatus'>" +
+                          "<span>" + obj.strmDtls + "</span></div>";
         }
-      });
-    }
+      }
+    });
 
-    function setHtml() {
+    const setHtml = () => {
       obj.twitcherHtml = "<div class='twitcher " + obj.twitchClass + "'>" +
                           obj.logoHtml + "<div class='userName'>" + obj.usrNmHtml +
                           "</div><div class='streamInfo'>" + obj.strmInfo +
                           "</div></div>";
       return obj;
     }
+
     return getUser.then(getChannel).then(getStrem).then(setHtml);
   }
 });
