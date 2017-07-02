@@ -22,7 +22,7 @@ $(function() {
       }
       else {
         $(".offline, .unknown").css({"display": "flex"});
-        $(".online").css({"display": "flex"});
+        $(".online").css({"display": "none"});
       }
     }
   });
