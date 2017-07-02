@@ -4,7 +4,7 @@ $(function() {
                     "brunofin", "comster404", "test_channel", "fentablar"];
 
   const twitchLink = (inst, user) =>
-    "https://wind-bow.gomix.me/twitch-api" + inst + "/" + user + "?callback=?";
+    "https://wind-bow.gomix.me/twitch-api/" + inst + "/" + user + "?callback=?";
 
   const twitcherData = twitchers.map(genTwitchData);
 
