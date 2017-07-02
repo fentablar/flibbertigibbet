@@ -43,7 +43,7 @@ $(function() {
   }
 
   function setHtml(arr) {
-    const user = arr[0], chan = arr[1], strm = data[2];
+    const user = arr[0], chan = arr[1], strm = arr[2];
     let usrError = user.error,
         usrErrMess = user.message,
         usrDspNmErr = usrErrMess ? usrErrMess.slice(usrErrMess.indexOf('"') + 1,
